@@ -286,6 +286,81 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 
+/obj/item/rogueweapon/shovel/saperka
+	name = "Saperka"
+	desc = "A compact, steel-headed spade favored by pioneers. \
+	Scarred by a hundred fieldworks, its socket is nicked from prying and the edge has been honed to bite through roots-or armor-in a pinch."
+	force = 12
+	force_wielded = 28
+	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/mace/smash, /datum/intent/shovelscoop)
+	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/mace/smash)
+	icon_state = "saperka"
+	icon = 'icons/roguetown/weapons/tools.dmi'
+	sharpness = 100
+	max_blade_int = 260
+	blade_dulling = DULLING_SHAFT_WOOD
+	wlength = WLENGTH_SHORT
+	gripped_intents = null
+	slot_flags = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_NORMAL
+	smeltresult = /obj/item/ingot/steel
+	minstr = 9
+	wdefense = 5
+	swingsound = BLADEWOOSH_MED
+	associated_skill = /datum/skill/combat/axes
+	resistance_flags = FLAMMABLE
+
+/obj/item/rogueweapon/shovel/saperka/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,
+"sx" = 0,
+"sy" = -10,
+"nx" = 2,
+"ny" = -8,
+"wx" = -9,
+"wy" = -8,
+"ex" = 5,
+"ey" = -11,
+"northabove" = 0,
+"southabove" = 1,
+"eastabove" = 1,
+"westabove" = 0,
+"nturn" = 105,
+"sturn" = -90,
+"wturn" = 0,
+"eturn" = 90,
+"nflip" = 0,
+"sflip" = 8,
+"wflip" = 8,
+"eflip" = 1)
+			if("wielded")
+				return list("shrink" = 0.8,
+"sx" = 3,
+"sy" = -5,
+"nx" = -8,
+"ny" = -5,
+"wx" = 0,
+"wy" = -5,
+"ex" = 5,
+"ey" = -5,
+"northabove" = 0,
+"southabove" = 1,
+"eastabove" = 1,
+"westabove" = 1,
+"nturn" = 135,
+"sturn" = -135,
+"wturn" = 240,
+"eturn" = 30,
+"nflip" = 0,
+"sflip" = 8,
+"wflip" = 8,
+"eflip" = 1)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /obj/item/burial_shroud
 	name = "winding sheet"
 	desc = "A burial veil for the deceased. It makes transporting bodies slightly more tolerable, and ensures that their spirits will not arrive to the afterlyfe without any coverings."

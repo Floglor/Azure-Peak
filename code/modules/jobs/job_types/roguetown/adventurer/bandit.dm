@@ -38,7 +38,8 @@
 		/datum/advclass/hedgemage,
 		/datum/advclass/iconoclast,
 		/datum/advclass/knave,
-		/datum/advclass/sellsword
+		/datum/advclass/sellsword,
+		/datum/advclass/pioneer
 	)
 
 /datum/job/roguetown/bandit/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
