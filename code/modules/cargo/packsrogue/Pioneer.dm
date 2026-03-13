@@ -120,12 +120,7 @@
 /datum/supply_pack/rogue/Pioneer/cogs
 	name = "Cogs"
 	cost = 20
-	contains = list(/obj/item/roguegear/bronze = 2)
-
-/datum/supply_pack/rogue/Pioneer/bmbstrap
-	name = "Bombdolier"
-	cost = 70
-	contains = list(/obj/item/bmbstrap)
+	contains = list(/obj/item/roguegear = 2)
 
 //Meh grenades.
 
